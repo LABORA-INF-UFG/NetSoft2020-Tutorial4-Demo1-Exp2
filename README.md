@@ -88,7 +88,7 @@ After accessing Web Application, you can check in main page the existence of UEs
 
 One of the steps that this project automates is the registration of UEs on Web User Interface. By default, _ansible playbook_ adds 3 Ue's.
 
-### Open5GS elements
+### The Evolved Packet Core elements
 The Evolved Packet Core (EPC) is composed by Serving Gateway (SGW), PDN Gateway (PGW), Home Subscriber Server (HSS), Policy and charging rules function (PCRF) and Mobility Management Entity (MME). All these elements are running in EPC container. You can check this with the following commands:
 ```
 docker exec -it epc bash
