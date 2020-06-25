@@ -98,3 +98,44 @@ The output should be similar to the following:
 <p align="center">
     <img src="images/epc_elements.png"/> 
 </p>
+
+### Open5GS Log's
+You can check the life cycle of each [Open5GS](https://open5gs.org//) element's through the respective log files in EPC containers. 
+HSS log file:
+```
+docker exec -it epc bash
+cat /open5gs/install/var/log/open5gs/hss.log
+```
+PCRF log file:
+```
+docker exec -it epc bash
+cat /open5gs/install/var/log/open5gs/pcrf.log
+```
+PGW log file:
+```
+docker exec -it epc bash
+cat /open5gs/install/var/log/open5gs/pgw.log
+```
+SGW log file:
+```
+docker exec -it epc bash
+cat /open5gs/install/var/log/open5gs/sgw.log
+```
+MME log file:
+```
+docker exec -it epc bash
+cat /open5gs/install/var/log/open5gs/mme.log
+```
+
+### OpenAirInterface Log's
+You can check the life cycle of each [OpenAirInterface System Emulation](https://gitlab.eurecom.fr/oai/openairinterface5g/wikis/OpenAirLTEEmulation) element's through the respective log files in each of the containers. 
+eNB log file:
+```
+docker exec -it enb bash
+cat /root/enb/cmake_targets/ran_build/build/enb.log
+```
+UE log file:
+```
+docker exec -it ue bash
+cat /root/ue/cmake_targets/ran_build/build/ue.log
+```
