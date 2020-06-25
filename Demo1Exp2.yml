@@ -6,7 +6,7 @@
     vars:
         docker_custom_subnet_network: '192.186.4.0/24'
         docker_custom_network_name: 'Demo1Exp2'
-        web_application_access_port: '3000'
+        web_application_access_port: '3001'
         ip_address_WEB_UI: '192.186.4.11'
         ip_address_EPC: '192.186.4.2'
         ip_address_MONGO_DB: '192.186.4.10'
