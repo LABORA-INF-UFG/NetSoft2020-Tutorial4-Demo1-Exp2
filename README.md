@@ -58,7 +58,11 @@ The output should be similar to the following:
 
 Done! The software is successfully installed.
 
-
 ## Tests
+
+In order to make the tests, access the UE container ``` docker exec -ti ue bash ```, and type ```ifconfig``` to check networks interfaces. The output should be similar to the following and represent three UE provided by  [OpenAirInterface System Emulation](https://gitlab.eurecom.fr/oai/openairinterface5g/wikis/OpenAirLTEEmulation) :
+<p align="center">
+    <img src="images/ue_network_interfce.png"/> 
+</p>
 
 ## Additional comments
