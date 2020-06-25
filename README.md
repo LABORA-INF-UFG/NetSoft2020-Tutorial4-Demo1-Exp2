@@ -65,4 +65,9 @@ In order to make the tests, access the UE container ``` docker exec -ti ue bash 
     <img src="images/ue_network_interfce.png"/> 
 </p>
 
+Still in the UE terminal, verify the connectivity with the internet ``` ping labora.inf.ufg.br -I <<ip-address-user-equipment-interface>> ```,  you can chose any of three ip address of the networks interfaces (UE) provided by [OpenAirInterface System Emulation](https://gitlab.eurecom.fr/oai/openairinterface5g/wikis/OpenAirLTEEmulation). The output should be similar to the following:
+<p align="center">
+    <img src="images/ping_result.png"/> 
+</p>
+
 ## Additional comments
