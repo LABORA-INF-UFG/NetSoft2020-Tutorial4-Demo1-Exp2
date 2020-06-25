@@ -72,7 +72,7 @@ Still in the UE terminal, verify the connectivity with the internet ``` ping lab
 
 ## Additional comments
 ### Open5GS Web Application
-[Open5GS](https://www.open5gs.org/) provide a web application to register and management of the UE's. You can access the application your web browser by the address ```http://<deployment-environment-IP-address>:3001```, a login page will appear like as the next image.
+[Open5GS](https://open5gs.org//) provide a web application to register and management of the UE's. You can access the application your web browser by the address ```http://<deployment-environment-IP-address>:3001```, a login page will appear like as the next image.
 <p align="center">
     <img src="images/web_ui_login.png"/> 
 </p>
@@ -87,3 +87,5 @@ After accessing Web Application, you can check in main page the existence of UEs
 </p>
 
 One of the steps that this project automates is the registration of UEs on Web User Interface. By default, _ansible playbook_ adds 3 Ue's.
+
+### Open5GS elements
