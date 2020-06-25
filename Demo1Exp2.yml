@@ -24,7 +24,7 @@
         UE_folder_name_container_name: '/root/ue/'
         ENB_folder_name_container_name: '/root/enb/'
         BASE_DIR_INSTALL: '/root/oaisim-4g-install'
-        force_docker_reinstall: 'true'
+        force_docker_reinstall: 'false'
         remove_old_install: 'true'
         MONGO_DB_container_name: 'mongodb'
         WEB_UI_container_name: 'webui-open5gs'
@@ -34,16 +34,15 @@
         path_workspace_open5gs: '/open5gs'
         default_username_WEBUI : "admin"
         default_password_WEBUI : "1423"
-        init_enb: 'false'
-        init_ue: 'false'
+        init_enb: 'true'
+        init_ue: 'true'
         init_epc: 'true'
         num_ues_init_simulation: '3'
         HPLMN : "20893"
         MSISDN : '33611123456'
         USIM_API_K : "8baf473f2f8fd09487cccbd7097c6862"
         OPC : "e734f8734007d6c5ce7a0508809e7e9c"
-        clear_file_instalation: 'false'
-        num_ues_init_database: '100'
+        clear_file_instalation: 'true'
         
         user_equiments:
             - { ue_id: UE0 ,   msin: '0000000001' }
@@ -491,7 +490,6 @@
           loop: "{{ user_equiments }}"
           loop_control:
             index_var: ue_idx
-          when: "ue_idx|int < {{ num_ues_init_database }}"
 
         - name  : Build iptables.sh file
           copy  :
@@ -810,7 +808,6 @@
           loop: "{{ user_equiments }}"
           loop_control:
             index_var: ue_idx
-          when: "ue_idx|int < {{ num_ues_init_database }} "
 
         - name  : Remove rcc.band7.tm1.nfapi.conf default file from eNB container
           shell : docker exec {{ ENB_container_name }} /bin/sh -c "rm enb/ci-scripts/conf_files/rcc.band7.tm1.nfapi.conf"
