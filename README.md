@@ -71,3 +71,19 @@ Still in the UE terminal, verify the connectivity with the internet ``` ping lab
 </p>
 
 ## Additional comments
+### Open5GS Web Application
+[Open5GS](https://www.open5gs.org/) provide a web application to register and management of the UE's. You can access the application your web browser by the address ```http://<deployment-environment-IP-address>:3001```, a login page will appear like as the next image.
+<p align="center">
+    <img src="images/web_ui_login.png"/> 
+</p>
+
+The Web Application access port can be changed through the parameter ```web_application_access_port```, the default value is _3001_. The default access credentials of the Web Application are:
+* User: **admin**
+* Pass: **1423**
+
+After accessing Web Application, you can check in main page the existence of UEs registered,  the result should be equivalent to that shown in the next figure:
+<p align="center">
+    <img src="images/web_ui_dashboard.png"/> 
+</p>
+
+One of the steps that this project automates is the registration of UEs on Web User Interface. By default, _ansible playbook_ adds 3 Ue's.
