@@ -47,7 +47,16 @@ Run the following Ansible playbook setting the parameter ```physical_network_int
 ```
 cd NetSoft2020-Tutorial4-Demo1-Exp2 && ansible-playbook -K Demo1Exp2.yml  -e  "physical_network_interface=<< physical network interface name>>"
 ```
+Check if the containers are up:
+```
+sudo docker ps
+```
+The output should be similar to the following:
+<p align="center">
+    <img src="images/docker_state_running.png"/> 
+</p>
 
+Done! The software is successfully installed.
 
 
 ## Tests
