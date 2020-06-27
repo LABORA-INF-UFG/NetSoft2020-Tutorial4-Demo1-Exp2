@@ -1,8 +1,7 @@
 # NetSoft2020 - Tutorial4 - Demo1 - Exp2
 
 ## Expected result
-After installation, five containers are available, two of then containing the elements of [OpenAirInterface System Emulation](https://gitlab.eurecom.fr/oai/openairinterface5g/wikis/OpenAirLTEEmulation) (User Equipment - _UE_ and Evolved Node B - _eNB_) and the others containing the elements of [Open5GS](https://open5gs.org//) (Evolved Packet Core - _EPC_, Mongo DB and Web User Interface). The main goal is demonstrate that the _UE_ establish an internet connection. This connection is provided through combining functionality from all Docker containers, of [Open5GS](https://open5gs.org//) components and [OpenAirInterface System Emulation](https://gitlab.eurecom.fr/oai/openairinterface5g/wikis/OpenAirLTEEmulation) components. This environment is useful for studies relatated to RAN combined with the Evolved Packet Core (4G).
-
+After installation, five containers are available, two of then running User Equipment (UE) and Evolved Node B (eNB) and and the others running the elements of Evolved Packet Core. As illustrated in the figure below, UE can establish an internet connection, provided through combining functionality of all components. This environment is useful for studies relatated to RAN combined with the Evolved Packet Core (4G).
 <p align="center">
     <img src="images/demo1-exp2.png" height="300"/> 
 </p>
