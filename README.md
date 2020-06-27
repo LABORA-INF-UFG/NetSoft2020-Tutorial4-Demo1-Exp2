@@ -38,12 +38,12 @@ Install Ansible:
 sudo apt -y install ansible
 ```
 
-Now we need get the name of **physical network interface**. Run ```ifconfig``` and take note the **_physical network interface name_**. The output should be similar to the following:
+Run ```ifconfig``` and get the name of **physical network interface**, like as illustrated in the figure below:
 <p align="center">
     <img src="images/if_config.PNG"/> 
 </p>
 
-Run the following Ansible playbook setting the parameter ```physical_network_interface```  (password for sudo is required):
+Run the following Ansible playbook (password for sudo is required):
 ```
 cd NetSoft2020-Tutorial4-Demo1-Exp2 && ansible-playbook -K Demo1Exp2.yml  -e  "physical_network_interface=<< physical network interface name>>"
 ```
@@ -60,12 +60,27 @@ Done! The software is successfully installed.
 
 ## Tests
 
-In order to make the tests, access the UE container ``` docker exec -ti ue bash ```, and type ```ifconfig``` to check networks interfaces. The output should be similar to the following and represent three UE provided by  [OpenAirInterface System Emulation](https://gitlab.eurecom.fr/oai/openairinterface5g/wikis/OpenAirLTEEmulation) :
+In order to make the tests, access the User Equipment container: 
+``` 
+ docker exec -ti ue bash 
+```
+ 
+ List the network interfaces:
+```
+ifconfig
+```
+
+The output should be similar to the following:
 <p align="center">
     <img src="images/ue_network_interfce.png"/> 
 </p>
 
-Still in the UE terminal, verify the connectivity with the internet ``` ping labora.inf.ufg.br -I <<ip-address-user-equipment-interface>> ```,  you can chose any of three ip address of the networks interfaces (UE) provided by [OpenAirInterface System Emulation](https://gitlab.eurecom.fr/oai/openairinterface5g/wikis/OpenAirLTEEmulation). The output should be similar to the following:
+Still in the UE terminal, verify the connectivity with the internet: 
+``` 
+ping labora.inf.ufg.br -I <<ip-address-user-equipment-interface>> 
+```
+
+The output should be similar to the following:
 <p align="center">
     <img src="images/ping_result.png"/> 
 </p>
